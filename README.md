@@ -1,5 +1,5 @@
 # sassunit
-Unit testing library for Dart Sass
+Unit testing framework for Dart Sass
 
 ## Idea
 

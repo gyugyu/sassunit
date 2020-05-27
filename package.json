@@ -1,7 +1,7 @@
 {
   "name": "@gyugyu/sassunit",
   "version": "0.1.0",
-  "description": "Unit testing library for Dart Sass",
+  "description": "Unit testing framework for Dart Sass",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
