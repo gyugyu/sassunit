@@ -1,0 +1,30 @@
+{
+  "name": "@gyugyu/sassunit",
+  "version": "0.1.0",
+  "description": "Unit testing library for Dart Sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gyugyu/sassunit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gyugyu/sassunit/issues"
+  },
+  "homepage": "https://github.com/gyugyu/sassunit#readme",
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/sass": "^1.16.0",
+    "sass": "^1.26.5",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "glob": "^7.1.6"
+  }
+}

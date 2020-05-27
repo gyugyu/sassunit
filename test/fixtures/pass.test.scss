@@ -1,0 +1,7 @@
+@function test-this-function-will-pass() {
+  @return 0;
+}
+
+@function this-function-will-pass() {
+  @error 'error';
+}

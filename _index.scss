@@ -1,0 +1,14 @@
+@use 'sass:map';
+@use 'sass:meta';
+@use 'sass:string';
+
+$functions: meta.module-functions('test-suite');
+$function-names: map.keys($functions);
+
+@each $function-name in $function-names {
+  @if string.index($function-name, 'test-') == 1 {
+    #{$function-name} {
+      #{$function-name}: meta.call(map.get($functions, $function-name));
+    }
+  }
+}
