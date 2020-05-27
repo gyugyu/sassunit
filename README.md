@@ -14,7 +14,7 @@ Unit testing library for Dart Sass
 @use '@gyugyu/assert-sass' as assert;
 
 @function test-sum() {
-  assert.assert-equal(functions.sum(2, 3), 5);
-  @return 0;
+  $ret: assert.assert-equal(functions.sum(2, 3), 5);
+  @return $ret;
 }
 ```
