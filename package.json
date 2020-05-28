@@ -31,5 +31,8 @@
   "dependencies": {
     "commander": "^5.1.0",
     "glob": "^7.1.6"
+  },
+  "peerDependencies": {
+    "sass": "^1.26.5"
   }
 }
