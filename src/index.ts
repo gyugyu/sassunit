@@ -16,6 +16,7 @@ export default function index(file: string, options: Options = {}) {
     [process.cwd()]
 
   const files = glob.sync(file)
+  let hasError = false
   files.forEach(f => {
     try {
       sass.renderSync({
@@ -30,6 +31,9 @@ ${runner}
       })
     } catch (e) {
       console.error(e)
+      hasError = true
     }
   })
+
+  return hasError
 }
