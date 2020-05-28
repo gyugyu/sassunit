@@ -9,6 +9,7 @@ $function-names: map.keys($functions);
   @if string.index($function-name, 'test-') == 1 {
     #{$function-name} {
       #{$function-name}: meta.call(map.get($functions, $function-name));
+      report: report();
     }
   }
 }

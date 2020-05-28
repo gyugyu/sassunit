@@ -2,6 +2,10 @@
   @return 0;
 }
 
+@function test-another-function-will-pass() {
+  @return 1;
+}
+
 @function this-function-will-pass() {
   @error 'error';
 }
