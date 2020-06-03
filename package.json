@@ -13,7 +13,11 @@
     "type": "git",
     "url": "git+ssh://git@github.com/gyugyu/sassunit.git"
   },
-  "keywords": [],
+  "keywords": [
+    "sass",
+    "scss",
+    "test"
+  ],
   "author": "",
   "license": "MIT",
   "bugs": {
