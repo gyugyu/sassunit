@@ -21,8 +21,10 @@ const options = {
 
 const file = program.file ?? '**/*.test.scss'
 
-const hasError = sassunit(file, options)
+const reporter = sassunit(file, options)
 
-if (hasError) {
+reporter.report()
+
+if (reporter.hasError()) {
   process.exit(1)
 }

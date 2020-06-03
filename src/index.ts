@@ -2,7 +2,8 @@ import fs from 'fs'
 import glob from 'glob'
 import path from 'path'
 import sass from 'sass'
-import reporter from './reporter'
+import reporter, { Reporter } from './reporter'
+import TestSuite from './TestSuite'
 
 const runner = fs.readFileSync(path.join(__dirname, '../_index.scss'), 'utf8')
 
@@ -10,14 +11,14 @@ interface Options {
   includePaths?: string[]
 }
 
-export default function index(file: string, options: Options = {}) {
+export default function index(file: string, options: Options = {}): Reporter {
   const includePaths = options.includePaths ?
     [process.cwd()].concat(options.includePaths) :
     [process.cwd()]
 
   const files = glob.sync(file)
-  let hasError = false
   files.forEach(f => {
+    reporter.setupTestSuite(new TestSuite(f))
     try {
       sass.renderSync({
         data: `
@@ -26,14 +27,13 @@ ${runner}
         `,
         includePaths,
         functions: {
-          ...reporter
+          pass: reporter.pass.bind(reporter)
         }
       })
-    } catch (e) {
-      console.error(e)
-      hasError = true
+    } catch (error) {
+      reporter.fail(error)
     }
   })
 
-  return hasError
+  return reporter
 }

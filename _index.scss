@@ -8,6 +8,6 @@ $function-names: map.keys($functions);
 @each $function-name in $function-names {
   @if string.index($function-name, 'test-') == 1 {
     $result: meta.call(map.get($functions, $function-name));
-    $report: report();
+    $passed: pass();
   }
 }

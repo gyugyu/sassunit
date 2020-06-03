@@ -2,12 +2,16 @@
   "name": "@gyugyu/sassunit",
   "version": "0.1.0",
   "description": "Unit testing framework for Dart Sass",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "bin": {
     "sassunit": "bin/sassunit.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf lib",
+    "compile": "tsc"
   },
   "repository": {
     "type": "git",
@@ -18,16 +22,22 @@
     "scss",
     "test"
   ],
-  "author": "",
+  "author": "Yusuke Yagyu <gyugyu@pepabo.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gyugyu/sassunit/issues"
   },
   "homepage": "https://github.com/gyugyu/sassunit#readme",
   "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-typescript": "^7.10.1",
     "@types/commander": "^2.12.2",
     "@types/glob": "^7.1.1",
+    "@types/jest": "^25.2.3",
     "@types/sass": "^1.16.0",
+    "babel-jest": "^26.0.1",
+    "jest": "^26.0.1",
     "sass": "^1.26.5",
     "ts-node": "^8.10.1",
     "typescript": "^3.9.3"
