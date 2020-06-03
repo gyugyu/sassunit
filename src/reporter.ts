@@ -27,6 +27,7 @@ class DefaultReporter implements Reporter {
   }
 
   report() {
+    console.log('')
     const passedTestCount = this.testSuites.reduce((count, suite) => {
       return count + suite.passingTestCount
     }, 0)

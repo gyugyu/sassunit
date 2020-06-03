@@ -16,7 +16,7 @@ export default function index(file: string, options: Options = {}): Reporter {
     [process.cwd()].concat(options.includePaths) :
     [process.cwd()]
 
-  const files = glob.sync(file)
+  const files = glob.sync(file, { ignore: 'node_modules/**/*' })
   files.forEach(f => {
     reporter.setupTestSuite(new TestSuite(f))
     try {

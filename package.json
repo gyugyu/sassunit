@@ -11,7 +11,8 @@
     "test": "jest",
     "build": "npm run clean && npm run compile",
     "clean": "rm -rf lib",
-    "compile": "tsc"
+    "compile": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",

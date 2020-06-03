@@ -1,7 +1,13 @@
 # sassunit
 Unit testing framework for Dart Sass
 
-## Idea
+## Installation
+
+```
+$ npm install @gyugyu/sassunit @gyugyu/assert-sass sass
+```
+
+## Example
 
 ```scss
 @function sum($a, $b) {
@@ -14,7 +20,7 @@ Unit testing framework for Dart Sass
 @use '@gyugyu/assert-sass' as assert;
 
 @function test-sum() {
-  $ret: assert.assert-equal(functions.sum(2, 3), 5);
+  $ret: assert.equals(functions.sum(2, 3), 5);
   @return $ret;
 }
 ```
