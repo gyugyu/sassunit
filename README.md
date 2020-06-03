@@ -24,3 +24,7 @@ $ npm install @gyugyu/sassunit @gyugyu/assert-sass sass
   @return $ret;
 }
 ```
+
+```
+$ npx sassunit
+```

@@ -14,7 +14,7 @@ interface Options {
 export default function index(file: string, options: Options = {}): Reporter {
   const includePaths = options.includePaths ?
     [process.cwd()].concat(options.includePaths) :
-    [process.cwd()]
+    [process.cwd(), 'node_modules']
 
   const files = glob.sync(file, { ignore: 'node_modules/**/*' })
   files.forEach(f => {
