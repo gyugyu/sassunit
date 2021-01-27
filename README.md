@@ -3,8 +3,8 @@ Unit testing framework for Dart Sass
 
 ## Installation
 
-```
-$ npm install @gyugyu/sassunit @gyugyu/assert-sass sass
+```bash
+npm install @gyugyu/sassunit @gyugyu/assert-sass sass
 ```
 
 ## Example
@@ -25,6 +25,14 @@ $ npm install @gyugyu/sassunit @gyugyu/assert-sass sass
 }
 ```
 
+```bash
+npx sassunit
 ```
-$ npx sassunit
+
+## Watch mode
+
+From v0.2.0, watch mode is added.
+
+```bash
+npx sassunit src --watch
 ```
