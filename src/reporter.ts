@@ -8,7 +8,7 @@ export interface Reporter {
   hasError(): boolean
 }
 
-class DefaultReporter implements Reporter {
+export class DefaultReporter implements Reporter {
   testSuites: TestSuite[] = []
   
   setupTestSuite(testSuite: TestSuite) {
@@ -55,6 +55,3 @@ class DefaultReporter implements Reporter {
     return errorCount > 0
   }
 }
-
-const reporter = new DefaultReporter()
-export default reporter
