@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "chokidar": "^3.5.1",
-    "commander": "^5.1.0",
+    "commander": "^7.0.0",
     "glob": "^7.1.6"
   },
   "peerDependencies": {
